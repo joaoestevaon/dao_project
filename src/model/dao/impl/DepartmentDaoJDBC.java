@@ -41,7 +41,7 @@ public class DepartmentDaoJDBC implements DepartmentDao{
 			if (rowsAffected > 0) {
 				ResultSet rs = st.getGeneratedKeys();
 				if (rs.next()) {
-					int id = rs.getInt("Id");
+					int id = rs.getInt(1);
 					obj.setId(id);
 				}
 				DB.closeResultSet(rs);
